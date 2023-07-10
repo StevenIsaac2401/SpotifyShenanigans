@@ -51,9 +51,8 @@ def get_songs_by_artist(token, artist_id):
     return json_result
 
 token = get_token()
-artist_name = "Hillsong"
-artist = search_for_artist(token, artist_name)
-artist_id = artist["id"]
+result = search_for_artist(token, "Hillsong")
+artist_id = result["id"]
 songs = get_songs_by_artist(token, artist_id)
 for idx, song in enumerate(songs):
     print(f"{idx + 1}. {song['name']}")
@@ -82,13 +81,16 @@ def get_key_of_track(token, track_id):
     json_result = json.loads(result.content)
     key_num = json_result["key"]
     mode = json_result["mode"]
-    key =  major_key_map[key_num] if mode == 1 else minor_key_map[key_num]
+    if mode == 1:
+        key = major_key_map[key_num]
+    else:
+        key = minor_key_map[key_num]
     return key
 
 token = get_token()
-song_name = "Monkey Type Beat"
-track = search_for_track(token, song_name)
-track_id = track["id"]
+song_name = "Monkey type beat"
+result = search_for_track(token, song_name)
+track_id = result["id"]
 print("\"" + song_name + "\" is in the key of: " + get_key_of_track(token, track_id))
 ######
 
