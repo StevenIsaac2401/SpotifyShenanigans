@@ -1,6 +1,8 @@
 # Spotify Shenanigans 🎵
 
-The current code in main contains code that:
+Repo for playing around with the Spotify API.
 
-1. Finds a specified artist and lists their top 10 most-listened to tracks (US-based)
-2. Uses the Spotify API to determine the mode (major or minor scale) and key of a given track
+The current code in main allows you to:
+
+1. Find a specified artist and list their top 10 most-listened to tracks (US-based)
+2. Use the Spotify API to determine the mode (major or minor scale) and key of a given track
