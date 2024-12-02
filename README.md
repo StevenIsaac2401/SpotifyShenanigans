@@ -10,3 +10,6 @@ The current code in main allows you to:
 Future Ideas:
 - Show real time guitar chords over lyrics
 - Song transposition
+
+
+[UPDATE: THE SPOTIFY API USED FOR THESE FEATURES WAS DEPRECATED 11/27/24]
